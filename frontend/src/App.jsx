@@ -18,10 +18,13 @@ export default function App() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        import.meta.env.VITE_API_URL + "/analyze",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Erro ao conectar ao servidor");
