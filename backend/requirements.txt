@@ -1,6 +1,7 @@
-python -m venv venv
-python.exe -m pip install --upgrade pip
-pip install --upgrade pip setuptools wheel
-pip install protobuf googleapis-common-protos google-generativeai python-docx pypdf
-
-Substituir a API KEY do código com a encontrada ao logar aqui: https://aistudio.google.com/
+fastapi
+uvicorn
+gunicorn
+python-multipart
+google-generativeai
+python-docx
+pypdf
