@@ -1,0 +1,14 @@
+# Ambiente virtual Python
+venv/
+
+# Variáveis de ambiente
+.env
+frontend/.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
