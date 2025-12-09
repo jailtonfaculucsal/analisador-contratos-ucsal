@@ -174,7 +174,7 @@ export default function App() {
 
       {/* CONTEÚDO */}
       <div style={styles.container}>
-        <h1 style={styles.title}>Analisador de Contratos</h1>
+        <h1 style={styles.title}>Analisador de Contratos de Estágio</h1>
 
         <label style={styles.box}>
           {renderContent()}
