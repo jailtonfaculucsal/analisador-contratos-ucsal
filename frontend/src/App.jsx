@@ -45,6 +45,21 @@ export default function App() {
     }
   }
 
+  function handleDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    handleUpload(file);
+  }
+
+  function handleDragOver(event) {
+    event.preventDefault();
+  }
+
+  function handleInputChange(event) {
+    const file = event.target.files[0];
+    handleUpload(file);
+  }
+
   const styles = {
     page: {
       minHeight: "100vh",
@@ -172,11 +187,14 @@ export default function App() {
         }}
       />
 
-      {/* CONTEÚDO */}
       <div style={styles.container}>
         <h1 style={styles.title}>Analisador de Contratos de Estágio</h1>
 
-        <label style={styles.box}>
+        <label
+          style={styles.box}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+        >
           {renderContent()}
           {status === "idle" && (
             <input
